@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Admin Dashboard | Vetri Multispeciality Hospital</title>
+
+<link rel="stylesheet" href="css/admin.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<header>
+
+<h1>🏥 Vetri Multispeciality Hospital</h1>
+
+<h2>Admin Dashboard</h2>
+
+</header>
+
+<div class="container">
+
+<div class="top">
+
+<input type="text" id="search" placeholder="Search Patient...">
+
+<button onclick="loadAppointments()">Refresh</button>
+
+</div>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Appointment No</th>
+
+<th>Patient</th>
+
+<th>Doctor</th>
+
+<th>Department</th>
+
+<th>Date</th>
+
+<th>Time</th>
+
+<th>Status</th>
+
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody id="appointmentTable">
+
+</tbody>
+
+</table>
+
+</div>
+
+<script type="module" src="js/admin.js"></script>
+
+</body>
+
+</html>
