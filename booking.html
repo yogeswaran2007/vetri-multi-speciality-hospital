@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book Appointment | Vetri Multispeciality Hospital</title>
+
+    <link rel="stylesheet" href="css/booking.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+<header>
+
+    <h1>Book Your Appointment</h1>
+
+    <p>Fill in your details to confirm your appointment.</p>
+
+</header>
+
+<div class="container">
+
+    <form id="bookingForm">
+
+        <div class="input-group">
+            <label>Patient Name</label>
+            <input type="text" id="patientName" required>
+        </div>
+
+        <div class="input-group">
+            <label>Mobile Number</label>
+            <input type="tel" id="mobile" maxlength="10" required>
+        </div>
+
+        <div class="input-group">
+            <label>Email Address</label>
+            <input type="email" id="email" required>
+        </div>
+
+        <div class="input-group">
+            <label>Select Department</label>
+            <select id="department" required>
+                <option value="">-- Select Department --</option>
+                <option>Cardiology</option>
+                <option>Neurology</option>
+                <option>Orthopaedics</option>
+                <option>Pediatrics</option>
+                <option>Dermatology</option>
+                <option>General Medicine</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label>Select Doctor</label>
+            <select id="doctor" required>
+                <option value="">-- Select Doctor --</option>
+                <option>Dr. R. Kumar</option>
+                <option>Dr. Priya</option>
+                <option>Dr. Arjun</option>
+                <option>Dr. Meena</option>
+                <option>Dr. Suresh</option>
+                <option>Dr. Anitha</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label>Appointment Date</label>
+            <input type="date" id="date" required>
+        </div>
+
+        <div class="input-group">
+            <label>Appointment Time</label>
+            <select id="time" required>
+                <option value="">-- Select Time --</option>
+                <option>09:00 AM</option>
+                <option>10:00 AM</option>
+                <option>11:00 AM</option>
+                <option>02:00 PM</option>
+                <option>03:00 PM</option>
+                <option>04:00 PM</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label>Symptoms</label>
+            <textarea id="symptoms" rows="4" placeholder="Describe your symptoms..." required></textarea>
+        </div>
+
+        <div class="input-group">
+            <label>Appointment Number</label>
+            <input type="text" id="appointmentNo" placeholder="Generated Automatically" readonly>
+        </div>
+
+        <button type="submit">
+            Confirm Appointment
+        </button>
+
+    </form>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script type="module" src="js/booking.js"></script>
+</body>
+
+</html>
