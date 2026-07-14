@@ -1,3 +1,5 @@
+/* Google Font */
+
 *{
     margin:0;
     padding:0;
@@ -6,35 +8,69 @@
 }
 
 body{
-    background:url("../images/hospital.jpg") no-repeat center center/cover;
     min-height:100vh;
+    background:url("../images/hospital.jpg") no-repeat center center/cover;
     display:flex;
     flex-direction:column;
+    overflow-x:hidden;
 }
 
-header{
-    background:rgba(0,119,182,0.9);
-    color:white;
-    text-align:center;
-    padding:25px;
+/* Dark Overlay */
+
+body::before{
+    content:"";
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.45);
+    z-index:-1;
 }
+
+/* Header */
+
+header{
+    text-align:center;
+    color:#fff;
+    padding:35px 20px 20px;
+}
+
+header h1{
+    font-size:36px;
+    margin-bottom:10px;
+    font-weight:700;
+}
+
+header p{
+    font-size:17px;
+    color:#f1f1f1;
+}
+
+/* Container */
 
 .container{
     width:100%;
     display:flex;
     justify-content:center;
     align-items:center;
-    padding:40px 20px;
+    padding:30px 15px 50px;
 }
+
+/* Booking Form */
 
 form{
     width:100%;
-    max-width:650px;
-    background:rgba(255,255,255,0.95);
+    max-width:700px;
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(18px);
+    border-radius:20px;
     padding:35px;
-    border-radius:15px;
-    box-shadow:0 10px 30px rgba(0,0,0,.25);
+    box-shadow:0 10px 35px rgba(0,0,0,.35);
+    border:1px solid rgba(255,255,255,.2);
 }
+
+/* Input Group */
 
 .input-group{
     margin-bottom:18px;
@@ -43,52 +79,99 @@ form{
 .input-group label{
     display:block;
     margin-bottom:8px;
+    color:#fff;
     font-weight:600;
-    color:#333;
 }
 
 .input-group input,
 .input-group select,
 .input-group textarea{
     width:100%;
-    padding:12px;
-    border:1px solid #ccc;
-    border-radius:8px;
+    padding:14px;
+    border:none;
+    outline:none;
+    border-radius:10px;
     font-size:15px;
+    background:rgba(255,255,255,.95);
+    color:#333;
 }
 
-.input-group textarea{
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus{
+    border:2px solid #00c6ff;
+}
+
+textarea{
     resize:vertical;
 }
 
+/* Readonly */
+
+input[readonly]{
+    background:#e9ecef;
+    font-weight:bold;
+    color:#0077b6;
+}
+
+/* Button */
+
 button{
     width:100%;
-    padding:14px;
+    padding:15px;
     border:none;
-    border-radius:8px;
-    background:#0077b6;
-    color:white;
-    font-size:16px;
+    border-radius:10px;
+    background:linear-gradient(135deg,#0077b6,#00b4d8);
+    color:#fff;
+    font-size:17px;
+    font-weight:600;
     cursor:pointer;
     transition:.3s;
 }
 
 button:hover{
-    background:#005f8f;
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(0,119,182,.4);
 }
+
+/* Responsive */
 
 @media(max-width:768px){
 
+    header h1{
+        font-size:28px;
+    }
+
+    header p{
+        font-size:15px;
+    }
+
+    .container{
+        padding:20px 10px 30px;
+    }
+
     form{
         padding:25px;
+    }
+
+}
+
+@media(max-width:480px){
+
+    form{
+        padding:20px;
+    }
+
+    header{
+        padding:25px 15px 15px;
     }
 
     header h1{
         font-size:24px;
     }
 
-    header p{
-        font-size:14px;
+    button{
+        font-size:16px;
     }
 
 }
